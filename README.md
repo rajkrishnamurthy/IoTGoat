@@ -21,15 +21,15 @@ The IoTGoat Project is a deliberately insecure firmware based on [OpenWrt](https
 
 Several methods exist to get started with hacking IoTGoat. 
 
-1. For those looking to extract the filesystem, analyze configurations and binaries statically, download the latest precompiled firmware release from https://github.com/scriptingxss/IoTGoat/releases. Refer to OWASP's [Firmware Security Testing Methodology](https://scriptingxss.gitbook.io/firmware-security-testing-methodology/) to help with identifying vulnerabilities. 
+1. For those looking to extract the filesystem, analyze configurations and binaries statically, download the latest precompiled firmware release from https://github.com/OWASP/IoTGoat/releases. Refer to OWASP's [Firmware Security Testing Methodology](https://scriptingxss.gitbook.io/firmware-security-testing-methodology/) to help with identifying vulnerabilities. 
    
-2. For dynamic web testing and binary runtime analysis, the quickest way to get started is downloading the [latest "IoTGoat-x86.vmdk" (VMware)](https://github.com/scriptingxss/IoTGoat/releases) and create a custom virtual machine using the IoTGoat disk image. Refer to OWASP's [Web Security Testing Guide](https://github.com/OWASP/wstg/tree/master/document) and [ASVS](https://github.com/OWASP/ASVS) projects for additional guidance on identifying web application vulnerabilities
+2. For dynamic web testing and binary runtime analysis, the quickest way to get started is downloading the [latest "IoTGoat-x86.vmdk" (VMware)](https://github.com/OWASP/IoTGoat/releases) and create a custom virtual machine using the IoTGoat disk image. Select the following operating system details `Type: Linux` `Version: Linux 2.6 / 3.x / 4.x (32-bit)` and `Enable PAE/NX` in virtual machine settings. Both the `.vmdk` and `.vdi` have been tested in the latest VirtualBox release (April 2020) for Windows 10, Ubuntu 18.04 LTS, and MacOS Mojave. Refer to OWASP's [Web Security Testing Guide](https://github.com/OWASP/wstg/tree/master/document) and [ASVS](https://github.com/OWASP/ASVS) projects for additional guidance on identifying web application vulnerabilities
 
 3. Emulate firmware with opensource tools (e.g. [Firmadyne](https://github.com/firmadyne/firmadyne), [ARM-X Framework](https://github.com/therealsaumil/armx/), and [FAT](https://github.com/attify/firmware-analysis-toolkit)) that leverage QEMU to virtualize IoTGoat locally.
 
 4. Use the `IoTGoat-raspberry-pi2-sysupgrade.img` firmware to flash on a Raspberry Pi 2 (BRCM2708 & BRCM2709).
 
-Refer to the [Getting started](https://github.com/OWASP/IoTGoat/wiki/Getting-started) page.
+Refer to the [Getting started](https://github.com/OWASP/IoTGoat/wiki/Getting-started) page for additional details and screencaptures.
 
 ### Building from source
 OpenWrt can build many different CPU platforms and boards. Building from source gives users the flexibility to flash IoTGoat on supported OpenWrt hardware. Ensure 10-15GB disk space is available with at least 4GB of RAM and a [supported Linux distribution such as Ubuntu 18.04](https://openwrt.org/docs/guide-developer/build-system/install-buildsystem). Use the following steps to get started with building custom firmware. 
